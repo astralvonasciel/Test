@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="Windows" product_id="0" product_minver="310">
+  <Options>
+    <Resolve>
+      <AutoModeDetection enabled="true" />
+      <ViaProxy enabled="false">
+        <TryLocalDnsFirst enabled="false" />
+      </ViaProxy>
+      <ExclusionList>%ComputerName%; localhost; *.local</ExclusionList>
+      <DnsUdpMode>0</DnsUdpMode>
+    </Resolve>
+    <Encryption mode="basic" />
+    <HttpProxiesSupport enabled="false" />
+    <HandleDirectConnections enabled="false" />
+    <ConnectionLoopDetection enabled="true" />
+    <ProcessServices enabled="false" />
+    <ProcessOtherUsers enabled="false" />
+  </Options>
+  <ProxyList>
+    <Proxy id="101" type="SOCKS5">
+      <Address>54.95.75.118</Address>
+      <Port>1080</Port>
+      <Options>48</Options>
+      <Authentication enabled="true">
+        <Username>ikkitousen</Username>
+        <Password>AAACVao40s4fagkilxXUyt7Lt12vw9IOl4o2ZfzpzU9xjwE=</Password>
+      </Authentication>
+    </Proxy>
+  </ProxyList>
+  <ChainList />
+  <RuleList>
+    <Rule enabled="true">
+      <Name>Localhost</Name>
+      <Targets>localhost; 127.0.0.1; %ComputerName%; ::1</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>New</Name>
+      <Applications>pso2.exe; pso2download.exe; pso2launcher.exe; pso2predownload.exe; pso2updater.exe</Applications>
+      <Action type="Proxy">101</Action>
+    </Rule>
+    <Rule enabled="true">
+      <Name>Default</Name>
+      <Action type="Direct" />
+    </Rule>
+  </RuleList>
+</ProxifierProfile>
